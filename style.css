@@ -1400,6 +1400,11 @@ footer {
     color: #484877;
 
 }
+.footer-li a{
+    text-decoration: none;
+    color: #484877 !important;
+}
+
 footer .container {
     width: 90%;
     margin: 0 auto;
