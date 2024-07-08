@@ -1,29 +1,22 @@
 window.addEventListener("scroll",()=>{
     document.querySelector("#navbar").classList.toggle("sticky-nav",scrollY > 0)
     document.querySelector(".logo img").classList.toggle("sticky-logo", scrollY > 0)
-    
-    if (scrollY > 0) {
-        document.querySelector(".home-logo img").src = "./images/logo-2.png";
-        
-    } else {
-        document.querySelector(".home-logo img").src = "./images/logo.png";
-    
-    }
+    document.querySelector(".home-logo img").classList.toggle("sticky-logo", scrollY > 0)
 })
 
 window.addEventListener('DOMContentLoaded', function() {
-    var homelogo = document.querySelector('.home-logo img');
+    var homelogo = document.querySelector('.logo img');
 
     function changelogo() {
-        if (window.innerWidth > 990) {
-            homelogo.src = './images/logo-2.png';
+        if (window.scrollY > 0) {
+            homelogo.src = './images/logo-2.webp';
         } 
         else {
-            homelogo.src = './images/Logo.png';
+            homelogo.src = './images/Logo (1).webp';
         }
     }
 
-    
+    window.addEventListener('scroll', changelogo);
     
     changelogo();
 });
