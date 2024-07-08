@@ -15,7 +15,7 @@ window.addEventListener('DOMContentLoaded', function() {
     var homelogo = document.querySelector('.home-logo img');
 
     function changelogo() {
-        if (window.innerWidth > 990) {
+        if (window.innerWidth > 10) {
             homelogo.src = './images/logo-2.png';
         } 
         else {
