@@ -8,8 +8,8 @@ window.addEventListener('DOMContentLoaded', function() {
     var homelogo = document.querySelector('.logo img');
 
     function changelogo() {
-        if (window.innerWidth > 10) {
-            homelogo.src = './images/logo-2.png';
+        if (window.scrollY > 10) {
+            homelogo.src = './images/logo-2.webp';
         } 
         else {
             homelogo.src = './images/Logo (1).webp';
