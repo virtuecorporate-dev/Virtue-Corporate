@@ -18,14 +18,13 @@ body{
     margin: 0;
     z-index: 2;
 }
-.logo{
-    
+.logo, .home-logo{
     width: auto;
     height: fit-content;
     padding: 0;
     margin-right: 20px;
 }
-.logo img{
+.logo img, .home-logo img{
     max-width: 150px;
     padding: 0;
 }
