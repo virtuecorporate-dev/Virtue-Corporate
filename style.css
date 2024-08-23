@@ -277,37 +277,44 @@ body{
 .about-sec{
     background-color: rgb(232, 231, 230);
    
-    padding: 30px;
+    padding: 10px;
 
 }
 .about-container{
-    padding: 60px;
+    padding: 0 60px;
 }
 .about-content{
-    padding: 80px 0 80px 0;
+    padding: 80px 0 30px 0;
 }
 
-
+.about-img-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
 .about-img img{
      height: 100%;
-     /* width: 100%; */
+     width: 100%;
+     border-radius: 10px;
 
      object-fit: cover;
 }
 
  .content-head{
     line-height: 1.5;
-    font-size: 45px;
+    font-size: 35px;
     font-weight: 400;
 } 
 .content-head b{
     color: #efbb1c;
     font-weight: 600;
+    font-size: 45px;
 }
 
 .content-caption{
-    margin-top: 20px;
-    font-size: 25px;
+    /* margin-top: 10px; */
+    font-size: 22px;
     font-weight: 400;
 }
 
@@ -319,6 +326,29 @@ body{
     border-radius: 50px;
     font-size: 20px;
     border: none;
+}
+
+
+
+.counter-con{
+    display: grid;
+    grid-template-columns: 2fr 2fr ;
+    
+}
+.counter{
+    font-size: 35px;
+    /* border: 1px solid red; */
+}
+.counter span{
+    font-size: 45px;
+    font-weight: 500;
+    
+}
+
+.counter p{
+    font-size: 20px;
+    color: #605e5e;
+    margin-top: -10px;
 }
 
 .about-sec .content-btn1,
@@ -342,8 +372,85 @@ body{
     
    
 }
+  
+ 
 
 /* --------about-style-end--------- */
+
+/* --------quote-sec-start----------- */
+
+.quote-banner-sec{
+    height: 50vh;
+    width: 100%;
+    
+}
+
+.quote-banner-con{
+height: 100%;
+background-image: url(./images/quote-banner.jpg);
+background-repeat: no-repeat;
+background-position: top;
+background-size: cover;
+background-attachment: fixed;
+position: relative;
+
+}
+.quote-banner-con::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(55, 66, 106, 0.804);
+}
+
+.quote-content{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.quote-content h2{
+    color: #efbb1c;
+    z-index: 5;
+    font-weight: 500;
+    font-size: 40px;
+}
+.quote-content p{
+    color: #fff;
+    z-index: 5;
+    font-size: 25px;
+}
+
+.quote-content .icon{
+    z-index:5 ;
+}
+
+/* --------quote-sec-start----------- */
+
+/* ----------sectors-we-serve------------ */
+
+/* .sectors-div{
+    display: grid;
+    grid-template-columns: 2fr 2fr 2fr 2fr;
+}
+.sector-item{
+    height: 300px;
+    position: relative;
+}
+.sector-item img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+} */
+/* ----------sectors-we-serve------------ */
+
+
  
 /* --------feature style start---------- */
 
