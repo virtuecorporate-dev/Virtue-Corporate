@@ -8,6 +8,7 @@ body{
     font-style: normal;
     overflow-x: hidden;
     color: #484877;
+    scroll-behavior: smooth;
    
 }
 /* -------nav-style-start--------- */
@@ -237,7 +238,6 @@ body{
 
 .home-banner-img{
     position: relative;
-    padding: 0;
 }
 .caption-inner{
     position: absolute;
@@ -402,7 +402,7 @@ position: relative;
     left: 0;
     height: 100%;
     width: 100%;
-    background-color: rgba(55, 66, 106, 0.804);
+    background-color: #37426acd;
 }
 
 .quote-content{
@@ -435,22 +435,75 @@ position: relative;
 
 /* ----------sectors-we-serve------------ */
 
+.sertors-elevate-con h2{
+    font-size: 40px;
+    font-weight: 500;
+    color: #efba1c;
+    margin-top: 100px;
+}
+
 .sectors-div{
     display: grid;
     grid-template-columns: 2fr 2fr 2fr 2fr;
     gap: 30px;
 }
 .sector-item{
-    border: 1px solid black;
+    /* border: 1px solid black; */
     height: 200px;
     position: relative;
     border-radius: 10px;
+    box-shadow: 1px 1px 7px #37426acd;
+    overflow: hidden;
+}
+.sector-item::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color:#37426ab4 ;
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
 }
 .sector-item img{
     height: 100%;
     width: 100%;
     object-fit: cover;
     border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+.sector-item-inner{
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 5;
+    opacity: 1;
+    transition: opacity 0.3s ease;
+}
+.sector-item-inner p{
+    color: #ffff;
+    font-size: 25px;
+    font-weight: 400;
+    margin-top: 10px;
+}
+.sector-item:hover .sector-item-inner{
+ opacity: 0;
+
+}
+.sector-item:hover::after{
+    background-color: transparent;
+   
+}
+.sector-item:hover img{
+    transform: scale(1.08);
+    
 }
 /* ----------sectors-we-serve------------ */
 
@@ -462,17 +515,17 @@ position: relative;
     padding: 30px;
 } */
 .feature-content{
-    padding: 100px 0 100px 0;
+    padding: 30px 0 30px 0;
 }
 .feature-col1{
-   padding: 50px !important;
+   /* padding: 50px !important; */
    text-align: left !important;
 }
 
 .feature-col{
     /* border: 1px solid #484877; */
     text-align: center;
-    padding: 30px;
+    /* padding: 30px; */
     align-content: center;
 }
 .feature-head{
@@ -485,7 +538,7 @@ position: relative;
     font-weight: 400;
     color: #605e5e;
     font-size: 20px;
-    padding: 10px;
+    /* padding: 10px; */
 }
 
 .feature-col i{
@@ -1640,9 +1693,23 @@ footer a{
 
     .home-banner-sec{
         margin-top: 0;
-    }    
+    }   
+    .sectors-div{
+        display: grid;
+        grid-template-columns: 3fr 3fr 3fr ;
+        gap: 30px;
+    } 
     
 }
+
+@media(max-width:800px){
+    .sectors-div{
+        display: grid;
+        grid-template-columns: 3fr 3fr  ;
+        gap: 30px;
+    } 
+}
+
 @media (max-width:700px){
     .stand-for-section{
         padding: 100px 0 100px 0;
@@ -1708,11 +1775,18 @@ footer a{
         padding: 0;
     }
     
+    
 }
 @media (max-width:500px){
     .sidenav-container{
         width: 100%;
     }
+    .sectors-div{
+        padding: 0 30px;
+        display: grid;
+        grid-template-columns: 3fr;
+        gap: 40px;
+    } 
 }
 
 @media (max-width:430px){
