@@ -237,7 +237,6 @@ body{
 
 .home-banner-img{
     position: relative;
-    padding: 0;
 }
 .caption-inner{
     position: absolute;
@@ -624,6 +623,210 @@ position: relative;
 }
 
 /* ------------client style end -------------------*/
+
+/* technology start--------------------------------- */
+
+
+.tech-imgs{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    /* row-gap: 25px; */
+    justify-content: space-between;
+    place-content: center;
+    padding: 10px;
+    margin-bottom: 20px;
+    gap: 25px;
+}
+.tech-img{
+    height: auto;
+    width: 150px;
+    padding: 20px;
+    justify-content: center;
+    place-content: center;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+
+.tech-img h3{
+    text-align: center;
+}
+
+.tech-img svg{
+    height: 100%;
+    width: 100%;
+}
+
+.tech-img img{
+    height: 100%;
+    width: 100%;
+}
+
+/* howwe-content start---------------------------------------------- */
+
+.howwe-head{
+    margin-top: 60px;
+}
+.howwe-content{
+    display: flex;
+    margin-top: 70px;
+
+}
+.howwe-contents{
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+.round{
+    display: flex;
+    place-content: center;
+}
+.howwe-rounds{
+    border: 1px solid #efba1c;
+    border-radius: 50%;
+    height: 130px;
+    width: 130px;
+    text-align: center;
+    align-items: center;
+    place-content: center;
+    display: flex;
+    
+}
+
+.howwe-num{
+    border: 15px solid #efba1c;
+    border-radius: 50%;
+    height: 100px;
+    width: 100px;
+    justify-content: center;
+    place-content: center;
+}
+
+.howwe-para{
+    text-align: center;
+    place-content: center;
+}
+
+.howwe-num svg{
+    border-radius: 50%;
+    color: white !important;
+    border: none !important;
+    opacity: 0.6;
+    font-size: 32px;
+    border: #605e5e;
+}
+
+.howwe-icons{
+    display: flex;
+    align-items: center;
+    justify-self: center;
+    margin-top: 40px;
+    gap: 10px;
+}
+
+/* quality start----------------------------------------------- */
+.quality{
+    background-color: #efba1c;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    padding: 40px;
+    height: 250px;
+}
+
+.quality-head span{
+    color: #fff;
+}
+
+.quality-head h3{
+    margin-top: 15px;
+}
+
+.quality-para{
+    display: flex;
+justify-content: center;
+margin-top: 20px;
+}
+
+.quality-para p{
+    font-size: larger;
+}
+
+.quality-items{
+    margin-top: -80px;
+    padding: 10px;
+    display: flex;
+    place-content: center;
+    justify-content: space-evenly;
+    
+
+}
+
+.quality-item{
+    place-content: center;
+    justify-content: center;
+    padding: 10px;
+    box-shadow: 0 0 5px wheat,
+    0 0 10px wheat;
+    margin-bottom: 20px;
+    background-color: white;
+
+}
+
+.quality-item h3{
+    text-align: center;
+    margin-top: 10px;
+    font-size: 23px;
+}
+.quality-item p{
+    text-align: center;
+}
+.quality-icons{
+    justify-content: center;
+    place-content: center;
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.quality-btn{
+    background-color: #efba1c;
+    border: 1px solid white;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 20px;
+    justify-content: center;
+    text-align: center;
+    display: flex;
+    place-content: center;
+    
+}
+
+
+/* our partner start---------------------- */
+.our-partners-container {
+    padding: 20px 0;
+}
+
+.our-partners-heading {
+    font-weight: bold;
+    color: #484877;
+}
+
+.our-partners-item {
+    margin-bottom: 20px;
+}
+
+.our-partners-img {
+    width: 180px;
+    height: 180px;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.our-partners-img:hover {
+    transform: scale(1.1);
+}
 
 /* ------------review-start------------------------ */
 .review-container{
@@ -1457,7 +1660,10 @@ position: relative;
   .team-ceo{
     padding: 80px 30px;
   }
-
+  .team-ceo span{
+    color: #efba1c;
+    font-size: large;
+  }
   .team-ceo h4{
     font-weight:600;
   }
@@ -1750,115 +1956,3 @@ footer a{
     }
 }
 
-
-/* technology start--------------------------------- */
-
-
-.tech-imgs{
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    /* row-gap: 25px; */
-    justify-content: space-between;
-    place-content: center;
-    padding: 10px;
-    margin-bottom: 20px;
-    gap: 25px;
-}
-.tech-img{
-    height: auto;
-    width: 150px;
-    padding: 20px;
-    justify-content: center;
-    place-content: center;
-    border-radius: 10px;
-    cursor: pointer;
-}
-
-
-.tech-img h3{
-    text-align: center;
-}
-
-.tech-img svg{
-    height: 100%;
-    width: 100%;
-}
-
-.tech-img img{
-    height: 100%;
-    width: 100%;
-}
-
-/* howwe-content start---------------------------------------------- */
-
-.howwe-head{
-    margin-top: 60px;
-}
-.howwe-content{
-    display: flex;
-    margin-top: 70px;
-
-}
-.howwe-contents{
-    justify-content: center;
-    margin-top: 20px;
-    margin-bottom: 40px;
-}
-
-.round{
-    display: flex;
-    place-content: center;
-}
-.howwe-rounds{
-    border: 1px solid #efba1c;
-    border-radius: 50%;
-    height: 130px;
-    width: 130px;
-    text-align: center;
-    align-items: center;
-    place-content: center;
-    display: flex;
-    
-}
-
-.howwe-num{
-    border: 15px solid #efba1c;
-    border-radius: 50%;
-    height: 100px;
-    width: 100px;
-    justify-content: center;
-    place-content: center;
-}
-
-.howwe-para{
-    text-align: center;
-    place-content: center;
-}
-
-.howwe-num svg{
-    border-radius: 50%;
-    color: white !important;
-    border: none !important;
-    opacity: 0.6;
-    font-size: 32px;
-    border: #605e5e;
-}
-
-.howwe-icons{
-    display: flex;
-    align-items: center;
-    justify-self: center;
-    margin-top: 40px;
-    gap: 10px;
-}
-
-/* quality start----------------------------------------------- */
-
-.quality-head span{
-    color: #efba1c;
-}
-
-.quality-head h3{
-    margin-top: 15px;
-}
