@@ -441,6 +441,7 @@ position: relative;
     gap: 30px;
 }
 .sector-item{
+    border: 1px solid black;
     height: 200px;
     position: relative;
     border-radius: 10px;
