@@ -6,7 +6,7 @@ body{
     font-family: "Teko", sans-serif;
     font-optical-sizing: auto;
     font-style: normal;
-    overflow-x: hidden;
+    /* overflow-x: hidden; */
     color: #484877;
     scroll-behavior: smooth;
    
@@ -238,6 +238,8 @@ body{
 
 .home-banner-img{
     position: relative;
+    width: 100%;
+    /* padding: 0; */
 }
 .caption-inner{
     position: absolute;
@@ -312,9 +314,9 @@ body{
     font-size: 45px;
 }
 
-.content-caption{
+.about-content .content-caption{
     /* margin-top: 10px; */
-    font-size: 22px;
+    font-size: 20px;
     font-weight: 400;
 }
 
@@ -346,7 +348,7 @@ body{
 }
 
 .counter p{
-    font-size: 20px;
+    font-size: 18px;
     color: #605e5e;
     margin-top: -10px;
 }
@@ -516,6 +518,7 @@ position: relative;
 } */
 .feature-content{
     padding: 30px 0 30px 0;
+    margin-top: 80px;
 }
 .feature-col1{
    /* padding: 50px !important; */
@@ -531,13 +534,13 @@ position: relative;
 .feature-head{
     font-weight: 500;
     margin: 10px;
-    font-size: 30px;
+    font-size: 25px;
 }
 
 .feature-caption{
     font-weight: 400;
     color: #605e5e;
-    font-size: 20px;
+    font-size: 18px;
     /* padding: 10px; */
 }
 
@@ -680,6 +683,11 @@ position: relative;
 
 /* technology start--------------------------------- */
 
+.technology-head{
+
+margin-top: 80px;
+margin-bottom: 30px;
+}
 
 .tech-imgs{
     display: flex;
@@ -720,7 +728,7 @@ position: relative;
 /* howwe-content start---------------------------------------------- */
 
 .howwe-head{
-    margin-top: 60px;
+    margin-top: 80px;
 }
 .howwe-content{
     display: flex;
@@ -2031,3 +2039,33 @@ footer a{
     }
 }
 
+
+ 
+
+    
+.testimonial-swipper swiper-container{
+    border: 1px solid red;
+    margin: 100px auto;
+      width: 500px;
+      height: 500px;
+     
+}
+
+.testimonial-swipper swiper-slide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    font-weight: bold;
+    color: #000;
+    background-color: #ffff;
+  }
+
+  .testimonial-swipper swiper-pagination{
+    border: 1px solid red;
+    background-color: red;
+    border: 1px solid red;
+  background-color: red;
+  position: relative; 
+  bottom: 10px;
+  }

@@ -1,6 +1,6 @@
 window.addEventListener("scroll",()=>{
     document.querySelector("#navbar").classList.toggle("sticky-nav",scrollY > 0)
-    document.querySelector(".logo img").classList.toggle("sticky-logo", scrollY > 0)
+    document.querySelector(".home-logo img").classList.toggle("sticky-logo", scrollY > 0)
     document.querySelector(".home-logo img").classList.toggle("sticky-logo", scrollY > 0)
 })
 
@@ -95,3 +95,29 @@ function counter(){
 }
 $(document).on('ready', counter);
 $(window).on('scroll', counter);
+
+
+// -----------------testimonial-------------
+
+
+// const swiperEl = document.querySelector(".mySwiper");
+
+// Object.assign(swiperEl, {
+//   grabCursor: true,
+//   effect: "creative",
+//   creativeEffect: {
+//     prev: {
+//       shadow: true,
+//       translate: [0, 0, -400],
+//     },
+//     next: {
+//       translate: ["100%", 0, 0],
+//     },
+//   },
+//   pagination: {
+//     el: swiperEl.parentElement.querySelector('swiper-pagination'),
+//     clickable: true,
+//   },
+// });
+
+// swiperEl.initialize();
