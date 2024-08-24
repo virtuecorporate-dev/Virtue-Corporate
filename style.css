@@ -1741,3 +1741,13 @@ footer a{
     margin-top: 40px;
     gap: 10px;
 }
+
+/* quality start----------------------------------------------- */
+
+.quality-head span{
+    color: #efba1c;
+}
+
+.quality-head h3{
+    margin-top: 15px;
+}
