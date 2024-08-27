@@ -1,6 +1,6 @@
 window.addEventListener("scroll",()=>{
     document.querySelector("#navbar").classList.toggle("sticky-nav",scrollY > 0)
-    document.querySelector(".home-logo img").classList.toggle("sticky-logo", scrollY > 0)
+    document.querySelector(".logo img").classList.toggle("sticky-logo", scrollY > 0)
     document.querySelector(".home-logo img").classList.toggle("sticky-logo", scrollY > 0)
 })
 
