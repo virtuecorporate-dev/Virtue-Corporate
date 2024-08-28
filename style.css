@@ -1602,6 +1602,14 @@ margin-top: 20px;
 
 /* ----------service-items-start------------------------- */
 
+.readmore{
+    color: #4b4bd6;
+    text-decoration: none;
+}
+.readmore:hover{
+    color: blue;
+}
+
 .service-items{
     padding: 30px;
     text-align: center;
@@ -1694,6 +1702,100 @@ margin-top: 20px;
 /* -----------------------startup-style-end---------------------- */
 
 /* ------------service-page-end-------------------- */
+
+/* --------------------web devlopment start------------------ */
+.Webapp-banner{
+    background-image: url(./images/web\ development\ banner.png);
+    /* backface-visibility: hidden; */
+    /* background-size: contain; */
+    /* background-repeat:no-repeat ; */
+   
+  }
+  .about-service-content{
+    color: black;
+    font-size: 22px;
+    text-align: center;
+    margin-top: 80px;
+  }
+  .about-service-content h2{
+    color: #484877;
+    font-weight: 700;
+    font-size: 40px;
+  }
+  .service-tech h3{
+    font-size: 35px;
+    color: #efbb1c;
+  }
+  .web-technologies-item{
+    margin-top: 20px;
+    color: #484877;
+    font-weight: 600;
+    font-size: 22px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 1px 1px 7px grey;
+    padding: 15px 0;
+  }
+  .web-technologies{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    gap: 25px;
+  
+  }
+
+  .web-technologies .head{
+    background-color: #efba1c;
+    color: #484877;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    /* padding: 10px 20px; */
+  }
+
+  .service-process-sec{
+    margin-top: 80px;
+    border: 1px solid red;
+  }
+  .service-process-sec h2{
+    font-size: 40px;
+    font-weight: 600;
+  }
+  .process-item-inner{
+    border-left: 3px solid #484877;
+    border-right: 3px solid #484877;
+    border-top: 1px solid #4848773f;
+    border-bottom: 1px solid #4848773f;
+    border-radius: 50px;
+    width: 400px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 30px;
+    margin: 20px 0;
+  }
+
+  .process-item-inner h4{
+    border: 5px solid #efbb1c;
+    border-radius: 50%;
+    height: fit-content;
+
+    padding: 8px 18px;
+  }
+
+  .process-item-inner p{
+    font-size: 23px;
+    color: #484877b9;
+    border-radius: 30px;
+    border-right: 3px solid #efbb1c;
+    /* border-top: 3px solid #efba1c49;
+    border-bottom: 3px solid #efba1c44; */
+    padding: 0px 30px;
+    margin-top: 15px;
+  }
 
 /* ------------------------------------------------------------------------------------------------------------ */
 
@@ -2235,7 +2337,7 @@ footer a{
 
 @media (min-width: 992px) {
     .teams-img {
-        margin-left:200px; /* Adjust this value according to your design */
+        margin-left:200px; 
     }
 }
 
@@ -2243,7 +2345,7 @@ footer a{
  
 
     
-.testimonial-swipper swiper-container{
+/* .testimonial-swipper swiper-container{
     border: 1px solid red;
     margin: 100px auto;
       width: 500px;
@@ -2268,4 +2370,4 @@ footer a{
   background-color: red;
   position: relative; 
   bottom: 10px;
-  }
+  } */
