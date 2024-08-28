@@ -1675,8 +1675,9 @@ margin-top: 20px;
   }
 
   .service-process-sec{
-    margin-top: 80px;
-    border: 1px solid red;
+    margin-top: 100px;
+    margin-bottom: 80px;
+    /* border: 1px solid red; */
   }
   .service-process-sec h2{
     font-size: 40px;
@@ -1694,28 +1695,199 @@ margin-top: 20px;
     align-items: center;
     justify-content: space-between;
     padding: 0 30px;
-    margin: 20px 0;
+    margin: 30px 0;
   }
 
   .process-item-inner h4{
     border: 5px solid #efbb1c;
     border-radius: 50%;
     height: fit-content;
-
+    margin-top: 5px;
     padding: 8px 18px;
   }
 
   .process-item-inner p{
-    font-size: 23px;
-    color: #484877b9;
+    font-size: 22px;
+    color: #484877;
     border-radius: 30px;
     border-right: 3px solid #efbb1c;
-    /* border-top: 3px solid #efba1c49;
-    border-bottom: 3px solid #efba1c44; */
+    border-bottom-left-radius: 0;
+    /* border-top: 5px  dashed #efba1c49; */
+    border-bottom: 5px dashed #efba1c5d; 
     padding: 0px 30px;
     margin-top: 15px;
   }
+  .process-item-col{
+    margin-top: 20px;
+  }
+  .process-item{
+    padding-left:20px ;
+    /* display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; */
+  }
+  /* .vertical-line{
+    height: 60px;
+    width: 10px;
+    border-left:1px solid black ;
+    border-right:1px solid black ;
+  } */
 
+  .web-dev-process-img{
+    /* border: 1px solid red; */
+    width: 100%;
+    height: 100%;
+
+  }
+  .web-dev-process-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .web-dev-process-img-col{
+    margin-top: -60px;
+  }
+
+  .we-provide{
+    background-color: whitesmoke;
+    padding-bottom: 80px;
+  }
+  .we-provide-sec{
+    width: 90%;
+    margin: auto;
+    padding-top: 20px;
+  }
+
+  .we-provide-sec h2{
+    margin-top: 60px;
+    margin-bottom: 30px;
+    font-size: 45px;
+    text-align: center;
+  }
+
+  .we-provide-con{
+    /* padding: 20px 0; */
+  }
+  .we-provide-col{
+    display: flex;
+   margin-top: 40px;
+  }
+  .we-provide-item{
+    background-color: white;
+    box-shadow: 1px 1px 7px #c1c0c0;
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+    transform: translateY(0) translateX(0);
+    transition: 0.3s linear;
+  }
+  .we-provide-item:hover{
+    transform: translateY(-10px) translateX(0);
+    /* z-index: 5; */
+  }
+
+  .we-provide-content{
+    padding: 0 20px 0 40px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* margin: 50px 0; */
+  }
+  .we-provide-content h3{
+    font-size: 40px;
+    font-weight: 500;
+  }
+  .we-provide-content p{
+    font-size: 18px;
+    margin-top: 20px;
+  }
+  .we-provide-img{
+    width: 100%;
+    height: 100%;
+    padding: 50px;
+  }
+  .we-provide-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .faq-sec{
+    padding:80px 0 ;
+  }
+  .faq-col h2{
+    font-size: 45px;
+    font-weight: 600;
+  }
+
+  .faq-sec .accordion{
+    border-radius: 0;
+  }
+  .faq-sec .accordion-item{
+    border: none !important;
+    margin-top: 30px;
+  }
+  .faq-sec .accordion-item h2 button{
+    font-size: 25px;
+    padding: 20px;
+  }
+  .faq-sec .accordion-item .accordion-body{
+    font-size: 20px;
+  }
+  .faq-sec .accordion-button{
+    background-color: #484877c1;
+    color: white;
+    border-radius: 0;
+  }
+  .faq-sec .accordion-button.collapsed{
+    border-radius: 0 !important;
+    background-color: #67678d92;
+  }
+  .faq-sec .accordion-button.collapsed:hover{
+    background-color: #484877c1;
+  }
+  .faq-sec .accordion-button:focus {
+    outline: none;
+    box-shadow: none;
+}
+.accordion-item:first-of-type>.accordion-header .accordion-button {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+.accordion-button::after{
+    color: white !important;
+}
+.start-your-project-sec{
+    
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
+  
+    text-align: end;
+}
+.start-your-project-sec h2{
+    font-size: 45px;
+    font-weight: 600;
+    line-height: 1.2;
+}
+.start-your-project-sec button{
+    padding: 5px 30px;
+    border: none;
+    background-color: #484877;
+    color: #fff;
+    width: fit-content;
+    font-size: 25px;
+    align-self: self-end;
+    margin-top: 20px;
+    /* border-radius: 10px; */
+}
+.start-your-project-sec button:hover{
+    background-color: transparent;
+    border: 1px solid #484877;
+    color: #484877;
+}
 /* ------------------------------------------------------------------------------------------------------------ */
 
 /* -----------contact page-style-start--------------------- */
