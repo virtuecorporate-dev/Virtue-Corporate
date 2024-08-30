@@ -522,6 +522,107 @@ body {
 
 
 /* recent about end---------------------- */
+.Careers{
+    display: flex;
+    justify-content: space-evenly;
+    background-color: #005395;
+    color: #fff;
+}
+
+.career-head {
+    justify-content: center;
+    align-items: center;
+    padding: 50px 0px 0px 50px;
+    margin-top: 30px;
+}
+.career-btn{
+    display: flex;
+    margin-top: 40px;
+    padding-left: 50px;
+
+
+}
+.career-para p{
+    font-size: large;
+    display: flex;
+    text-align: center;
+    padding-left: 43px;
+}
+.career-btn button{
+    background-color: #efba1c;
+    padding: 10px;
+    border-radius: 5px;
+    color: white;
+    border: 1px solid efba1c;
+    display: flex;
+}
+
+.career-head span{
+    color: #efba1c;
+}
+.career-img{
+    height: 450px;
+    width: 450px;
+    display: flex;
+}
+
+.career-img img{
+    float: right;
+}
+
+.career-join{
+    display: inline-flex;
+    justify-content: space-evenly;
+    row-gap: 40px;
+    padding: 15px;
+    border-radius: 5px;
+    justify-content: center;
+    place-content: center;
+    text-align: center;
+    margin-top: 40px;
+}
+.join-head h3{
+    color: #efba1c;
+    margin-bottom: 10px;
+    font-size: xx-large;
+}
+.join-head span{
+    color: #efba1c;
+    font-size: large;
+}
+
+.join-head p{
+    font-weight: 500;
+}
+.benefits{
+    padding: 30px;
+    
+}
+.benefit-head{
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 50px;
+    color: #efba1c;
+    font-size: larger;
+}
+
+.accordion-button{
+    background-color: #005395;
+    color: #efba1c;
+    font-size: 25px;
+}
+.submit-career button{
+    background-color: #efba1c;
+    color: #005395;
+    font-weight: bold;
+}
+/* carrer page start-------------------------------------------- */
+
+
+
+
+/* carrer page end-------------------------------------------- */
+
 .about-container {
     padding: 0 60px;
 }
@@ -823,6 +924,7 @@ body {
 
 
 /* ------------features style end------------- */
+
 
 /* -----------client style start------------- */
 /* 
