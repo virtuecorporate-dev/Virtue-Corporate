@@ -1976,6 +1976,25 @@ body {
 .Webdesign-banner{
     background-image: url(./images/Web\ Design\ Banner.png);
 }
+.mblapp-banner{
+    background-image: url(./images/mbl-app-banner.png);
+}
+
+.dm-banner{
+    background-image: url(./images/digital-marketing-banner.png);
+}
+.cb-banner{
+    background-image: url(./images/corporate-branding-banner.png);
+}
+.gd-banner{
+    background-image: url(./images/graphic-design-banner.png);
+}
+.seo-banner{
+    background-image: url(./images/seo-banner.png);
+}
+.smo-banner{
+    background-image: url(./images/smo-banner.png);
+}
 
 .about-service-content {
     color: black;
@@ -2081,6 +2100,7 @@ body {
     border-bottom: 5px dashed #efba1c5d;
     padding: 0px 30px;
     margin-top: 15px;
+    text-align: right;
 }
 
 .process-item-col {
