@@ -247,7 +247,7 @@
                 </div>
                 <div class="col-lg-6">
                     <div class="join-img">
-                        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" width="200" height="200" x="0" y="0" viewBox="0 0 64 64" style="enable-background:new 0 0 512 512" xml:space="preserve" class=""><g><path d="M62.817 61.423 51 44.683V26h3a1 1 0 0 0 .822-1.569l-9-13a1.038 1.038 0 0 0-1.644 0l-2.238 3.232a.976.976 0 0 0-.118-.232l-9-13a1.038 1.038 0 0 0-1.644 0l-9 13a.976.976 0 0 0-.118.232l-2.238-3.232a1.038 1.038 0 0 0-1.644 0l-9 13A1 1 0 0 0 10 26h3v18.683L1.183 61.423A1 1 0 0 0 2 63h60a1 1 0 0 0 .817-1.577ZM23 16h3v2h2v-3a1 1 0 0 0-1-1h-2.091L32 3.757 39.091 14H37a1 1 0 0 0-1 1v3h2v-2h3.016l-3.4 4.91a5.989 5.989 0 0 0-11.232 0l-3.4-4.91Zm16 13.026A4.948 4.948 0 0 0 36 28h-.69a6.041 6.041 0 0 0 1.878-2H39ZM36 34v21h-3V43h-2v12h-3V34h-2v8h-1v-9a3 3 0 0 1 3-3h8a3 3 0 0 1 3 3v9h-1v-8Zm-7.31-6H28a4.948 4.948 0 0 0-3 1.026V26h1.812a6.041 6.041 0 0 0 1.878 2ZM32 27a4 4 0 1 1 4-4 4 4 0 0 1-4 4Zm13.75 34-4.791-16.282-1.918.564L43.665 61h-23.33l4.624-15.718-1.918-.564L18.25 61H3.93l10.887-15.423A1 1 0 0 0 15 45V25a1 1 0 0 0-1-1h-2.091L19 13.757 26.09 24H24a1 1 0 0 0-1 1v18a1 1 0 0 0 1 1h2v12a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V44h2a1 1 0 0 0 1-1V33c0-.08-.02-.154-.024-.233H41V25a1 1 0 0 0-1-1h-2.09L45 13.757 52.091 24H50a1 1 0 0 0-1 1v20a1 1 0 0 0 .183.577L60.07 61Z" data-name="Layer 16" fill="#005395" opacity="1" data-original="#000000" class=""></path></g></svg>
+                        <img src="./images/joinus.jpeg" alt="" class="img-fluid">
                     </div>
                 </div>
               
@@ -337,7 +337,9 @@
                             <div class="row justify-content-center">
                                 <div class="col-lg-8">
                                     <h2 class="text-center mb-4">Join Our Team</h2>
-                                    <form action="/submit-application" method="POST" enctype="multipart/form-data">
+                                    <form action="/submit-application" method="POST" enctype="multipart/form-data" id="form">
+                                        <input type="hidden" name="access_key" value="ce35ddae-b998-4d02-9326-0b6952ff5ced">
+                
                                         <div class="mb-3">
                                             <label for="fullName" class="form-label">Full Name</label>
                                             <input type="text" class="form-control" id="fullName" name="fullName" placeholder="Enter your full name" required>
@@ -378,26 +380,64 @@
                                             <textarea class="form-control" id="coverLetter" name="coverLetter" rows="4" placeholder="Include a brief cover letter (optional)"></textarea>
                                         </div>
                                         <div class="submit-career">
-                                            <button type="submit" class="btn">Submit Application</button>
+                                            <button type="submit" class="btn btn-primary">Submit Application</button>
                                         </div>
+                                        <div id="result"></div>
                                     </form>
                                 </div>
                             </div>
                         </div>
                     </section>
-                    
+                
                     <script>
                         function toggleOtherField(value) {
                             var otherField = document.getElementById("otherPositionField");
-                            if (value === "Others") {
-                                otherField.style.display = "block";
-                            } else {
-                                otherField.style.display = "none";
-                            }
+                            otherField.style.display = value === "Others" ? "block" : "none";
                         }
                     </script>
-                    
+                
+                    <script>
+                        document.getElementById('form').addEventListener('submit', function(e) {
+                            e.preventDefault();
+                
+                            const formData = new FormData(this);
+                            const object = Object.fromEntries(formData);
+                            const json = JSON.stringify(object);
+                            const result = document.getElementById('result');
+                
+                            result.innerHTML = "Please wait...";
+                
+                            fetch('https://api.web3forms.com/submit', {
+                                method: 'POST',
+                                headers: {
+                                    'Content-Type': 'application/json',
+                                    'Accept': 'application/json'
+                                },
+                                body: json
+                            })
+                            .then(async response => {
+                                const json = await response.json();
+                                if (response.status === 200) {
+                                    result.innerHTML = "Form submitted successfully";
+                                } else {
+                                    console.log(response);
+                                    result.innerHTML = json.message;
+                                }
+                            })
+                            .catch(error => {
+                                console.error(error);
+                                result.innerHTML = "Something went wrong!";
+                            })
+                            .finally(() => {
+                                this.reset();
+                                setTimeout(() => {
+                                    result.style.display = "none";
+                                }, 3000);
+                            });
+                        });
+                    </script>
                 </div>
+                
             </div>
         </div>
     </section>
