@@ -1,17 +1,22 @@
 window.addEventListener("scroll",()=>{
     document.querySelector("#navbar").classList.toggle("sticky-nav",scrollY > 0)
     document.querySelector(".logo img").classList.toggle("sticky-logo", scrollY > 0)
-    document.querySelector(".home-logo img").classList.toggle("sticky-logo", scrollY > 0)
+    document.querySelector(".home-logo .des-logo").classList.toggle("sticky-logo", scrollY > 0)
+    document.querySelector(".home-logo .mbl-logo").classList.toggle("sticky-logo", scrollY > 0)
 })
 
 window.addEventListener('DOMContentLoaded', function() {
-    var homelogo = document.querySelector('.logo img');
+    var logo = document.querySelector('.logo img');
+    var homelogo = document.querySelector(".home-logo .mbl-logo")
+
 
     function changelogo() {
         if (window.scrollY > 10) {
+            logo.src = './images/logo-2.webp';
             homelogo.src = './images/logo-2.webp';
         } 
         else {
+            logo.src = './images/Logo (1).webp';
             homelogo.src = './images/Logo (1).webp';
         }
     }
