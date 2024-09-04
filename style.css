@@ -1761,7 +1761,6 @@ body {
 
 .stay-contact-sec {
     background-color: #005395;
-
     padding: 30px 0 30px 0;
 
 }
@@ -2659,7 +2658,18 @@ body {
 
 .contact-form {
     padding: 50px 0 50px 0;
+    color: #efba1c;
     /* border: 1px solid #484877; */
+}
+.contact-location h4, .feature-caption{
+    color: #efba1c !important;
+}
+.contact-form label{
+    color: #efba1c !important;
+}
+.contact-form button{
+    background-color: #efba1c !important;
+    color: #005395 !important;
 }
 
 .form-content {
