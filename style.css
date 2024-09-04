@@ -1902,13 +1902,14 @@ body {
 
 .service-head {
     line-height: 1.5;
-    font-size: 50px;
+    font-size: 30px;
     font-weight: 400;
-    color: #efbb1c;
+    color: #ffff;
 }
 
 .service-head b {
-    color: white;
+    font-size: 40px;
+    color: #efba1c;
     font-weight: 600;
 }
 
@@ -1921,9 +1922,9 @@ body {
 
 .service-caption {
     margin-top: 20px;
-    font-size: 25px;
+    font-size: 18px;
     font-weight: 400;
-    color: #efbb1c;
+    color: #ffff;
 }
 
 .service-content button {
@@ -1931,7 +1932,7 @@ body {
     font-weight: 500;
     margin: 10px 20px 0 0;
     border-radius: 50px;
-    font-size: 20px;
+    font-size: 18px;
     border: none;
 }
 
@@ -1979,17 +1980,18 @@ body {
 }
 
 .services-top .service-head {
-    font-size: 35px;
+    font-size: 30px;
     color: #484877;
 }
 
 .services-top .service-caption {
-    font-size: 20px;
+    font-size: 18px;
     color: #484877;
 }
 
 .services-top .service-head b {
     color: #efbb1c;
+    font-size: 40px;
 }
 
 .services-top hr {
@@ -2020,6 +2022,12 @@ body {
 .service-items {
     padding: 30px;
     text-align: center;
+}
+.service-items h4{
+    font-size: 20px;
+}
+.service-items .feature-caption{
+    font-size: 18px !important;
 }
 
 /* .service-items .feature-head{
@@ -2062,7 +2070,7 @@ body {
 .startup-section .container-fluid {
 
 
-    height: 120vh;
+    height: 100%;
     background-image: url(./images/Service.webp);
     background-size: cover;
     background-attachment: fixed;
@@ -2072,25 +2080,26 @@ body {
 }
 
 .startup-content {
-    padding: 100px 60px 0px 50px;
+    padding: 80px 60px 20px 50px;
 
 }
 
 .startup-head {
-    line-height: 1.5;
+    /* line-height: 1.5; */
     font-weight: 400;
-    font-size: 40px;
+    font-size: 30px;
 }
 
 .startup-head b {
     font-weight: 500;
+    font-size: 40px;
     color: #efbb1c;
 }
 
 .startup-caption {
     font-weight: 400;
     margin-top: 20px;
-    font-size: 20px;
+    font-size: 18px;
 }
 
 .service-progress .progress-inner {
@@ -2107,12 +2116,12 @@ body {
 }
 
 .progress-inner h4 {
-    font-size: 25px;
+    font-size: 20px;
 }
 
 .service-progress .progress-bar {
     background-color: #005395 !important;
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 400;
 }
 
