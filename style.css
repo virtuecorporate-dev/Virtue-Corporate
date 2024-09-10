@@ -391,6 +391,7 @@ body {
 .about1-col span {
     font-size: larger;
     color: #efba1c;
+    font-weight: bold;
 }
 
 .about1-col p {
@@ -707,7 +708,7 @@ body {
 .join-head p{
     font-weight: 500;
 }
-.benefits{
+/* .benefits{
     padding: 30px;
     
 }
@@ -723,10 +724,57 @@ body {
     background-color: #005395;
     color: #efba1c;
     font-size: 25px;
+} */
+.benefit-box {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.benefit-head {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.benefit-item {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.benefit-item:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px);
+}
+
+.benefit-item h4 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #efba1c;
+}
+
+.benefit-item p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.benefit-item span {
+    font-weight: bold;
+    color: #2E236C; /* Use your preferred color */
+}
+.submit-career{
+    display: flex;
+    justify-content: center;
+
 }
 .submit-career button{
     background-color: #005395;
-    color: #005395;
+    color: #fff;
     font-weight: bold;
 }
 
