@@ -16,8 +16,8 @@ window.addEventListener('DOMContentLoaded', function() {
             homelogo.src = './images/logo-2.webp';
         } 
         else {
-            logo.src = './images/Logo (1).webp';
-            homelogo.src = './images/Logo (1).webp';
+            logo.src = './images/Logo.png';
+            homelogo.src = './images/Logo.png';
         }
     }
 
