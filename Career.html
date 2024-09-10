@@ -246,8 +246,17 @@
                     </div>
                 </div>
                 <div class="col-lg-6">
-                    <div class="join-img">
+                    <!-- <div class="join-img">
                         <img src="./images/joinus.jpeg" alt="" class="img-fluid">
+                    </div> -->
+                    <div class="join-head">
+                        <h3>
+                            Paid Time Off
+                         </h3>
+                        <p>
+                            We believe in the importance of taking time to recharge. Enjoy generous paid time off, including vacation days, holidays, and personal leave, so you can spend quality time with loved ones and return to work refreshed and motivated.
+
+                        </p>
                     </div>
                 </div>
               
@@ -257,190 +266,152 @@
     </section>
     <section>
         <div class="container-fluid benefits">
-            <div class="row">
-                <div class="col-lg-6 benefit">
-                    <div class="benefit-head">
-                        <h3>
-                            Benefits and Perks
-                         </h3>
-                       
+            <section class="career-form-section">
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-8">
+                            <h2 class="text-center mb-4">Join Our Team</h2>
+                            <form action="/submit-application" method="POST" enctype="multipart/form-data" id="form">
+                                <input type="hidden" name="access_key" value="ce35ddae-b998-4d02-9326-0b6952ff5ced">
+        
+                                <div class="mb-3">
+                                    <label for="fullName" class="form-label">Full Name</label>
+                                    <input type="text" class="form-control" id="fullName" name="fullName" placeholder="Enter your full name" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="email" class="form-label">Email Address</label>
+                                    <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email address" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="phone" class="form-label">Phone Number</label>
+                                    <input type="tel" class="form-control" id="phone" name="phone" placeholder="Enter your phone number" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="position" class="form-label">Position Applied For</label>
+                                    <select class="form-select" id="position" name="position" required onchange="toggleOtherField(this.value)">
+                                        <option value="" disabled selected>Select a position</option>
+                                        <option value="Web Developer">Web Developer</option>
+                                        <option value="Front-End Developer">Front-End Developer</option>
+                                        <option value="Back-End Developer">Back-End Developer</option>
+                                        <option value="Full-Stack Developer">Full-Stack Developer</option>
+                                        <option value="SEO Specialist">SEO Specialist</option>
+                                        <option value="SMO Specialist">SMO Specialist</option>
+                                        <option value="Digital Marketing">Digital Marketing</option>
+                                        <option value="Business Executive">Business Executive</option>
+                                        <option value="Others">Others</option>
+                                    </select>
+                                </div>
+                                <div class="mb-3" id="otherPositionField" style="display:none;">
+                                    <label for="otherPosition" class="form-label">Please Specify</label>
+                                    <input type="text" class="form-control" id="otherPosition" name="otherPosition" placeholder="Enter the position">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="linkdin" class="form-label">Linkdin</label>
+                                    <input type="tel" class="form-control" id="linkdin" name="linkdin" placeholder="Enter your linkdin" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="resume" class="form-label">Upload Resume</label>
+                                    <input type="file" class="form-control" id="resume" name="resume" accept=".pdf,.doc,.docx" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="coverLetter" class="form-label">Cover Letter</label>
+                                    <textarea class="form-control" id="coverLetter" name="coverLetter" rows="4" placeholder="Include a brief cover letter (optional)"></textarea>
+                                </div>
+                                <div class="submit-career">
+                                    <button type="submit" class="btn btn-primary">Submit Application</button>
+                                </div>
+                                <div id="result"></div>
+                            </form>
+                        </div>
                     </div>
-                    <div class="accordion accordion-flush" id="accordionFlushExample">
-                        <div class="accordion-item">
-                            <h2 class="accordion-header" id="flush-headingOne">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-                                    Flexible Work Arrangements
-                                </button>
-                            </h2>
-                            <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
-                                <div class="accordion-body">
-                                    <p>
-                                        At <span>Virtue Corporate</span>, we understand the importance of work-life balance. That's why we offer flexible work arrangements, allowing you to tailor your schedule to fit your personal and professional needs. Whether it's remote work, flexible hours, or a hybrid model, we empower you to work in a way that suits you best.
-                                    </p>
-                                </div>
-                            </div>
+                </div>
+            </section>
+        
+            <script>
+                function toggleOtherField(value) {
+                    var otherField = document.getElementById("otherPositionField");
+                    otherField.style.display = value === "Others" ? "block" : "none";
+                }
+            </script>
+        
+            <script>
+                document.getElementById('form').addEventListener('submit', function(e) {
+                    e.preventDefault();
+        
+                    const formData = new FormData(this);
+                    const object = Object.fromEntries(formData);
+                    const json = JSON.stringify(object);
+                    const result = document.getElementById('result');
+        
+                    result.innerHTML = "Please wait...";
+        
+                    fetch('https://api.web3forms.com/submit', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json',
+                            'Accept': 'application/json'
+                        },
+                        body: json
+                    })
+                    .then(async response => {
+                        const json = await response.json();
+                        if (response.status === 200) {
+                            result.innerHTML = "Form submitted successfully";
+                        } else {
+                            console.log(response);
+                            result.innerHTML = json.message;
+                        }
+                    })
+                    .catch(error => {
+                        console.error(error);
+                        result.innerHTML = "Something went wrong!";
+                    })
+                    .finally(() => {
+                        this.reset();
+                        setTimeout(() => {
+                            result.style.display = "none";
+                        }, 3000);
+                    });
+                });
+            </script>
+           
+        </div>
+    </section>
+    <section>
+        <div class="container">
+            <div class="benefit-box mt-3">
+                <h3 class="benefit-head text-center">Benefits and Perks</h3>
+                <div class="row">
+                    <div class="col-lg-6 mb-4">
+                        <div class="benefit-item">
+                            <h4>Flexible Work Arrangements</h4>
+                            <p>At <span>Virtue Corporate</span>, we understand the importance of work-life balance. That's why we offer flexible work arrangements, allowing you to tailor your schedule to fit your personal and professional needs. Whether it's remote work, flexible hours, or a hybrid model, we empower you to work in a way that suits you best.</p>
                         </div>
-                        <div class="accordion-item">
-                            <h2 class="accordion-header" id="flush-headingTwo">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
-                                    Learning and Development
-                                </button>
-                            </h2>
-                            <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
-                                <div class="accordion-body">
-                                    <p>Your growth is our priority. We provide access to a wide range of learning opportunities, including workshops, courses, and certifications. Whether you're looking to enhance your current skills or explore new areas, we support your journey toward continuous professional development.</p>
-                                </div>
-                            </div>
+                    </div>
+                    <div class="col-lg-6 mb-4">
+                        <div class="benefit-item">
+                            <h4>Learning and Development</h4>
+                            <p>Your growth is our priority. We provide access to a wide range of learning opportunities, including workshops, courses, and certifications. Whether you're looking to enhance your current skills or explore new areas, we support your journey toward continuous professional development.</p>
                         </div>
-                        <div class="accordion-item">
-                            <h2 class="accordion-header" id="flush-headingThree">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
-                                    Wellness Programs
-                                </button>
-                            </h2>
-                            <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
-                                <div class="accordion-body">
-                                    <p>We care about your well-being. Our wellness programs are designed to support your physical and mental health. From gym memberships and yoga sessions to mental health resources, we offer various initiatives to help you stay healthy and energized.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="accordion-item">
-                            <h2 class="accordion-header" id="flush-headingFour">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
-                                    Paid Time Off
-                                </button>
-                            </h2>
-                            <div id="flush-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-headingFour" data-bs-parent="#accordionFlushExample">
-                                <div class="accordion-body">
-                                    <p>We believe in the importance of taking time to recharge. Enjoy generous paid time off, including vacation days, holidays, and personal leave, so you can spend quality time with loved ones and return to work refreshed and motivated.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="accordion-item">
-                            <h2 class="accordion-header" id="flush-headingFive">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFive" aria-expanded="false" aria-controls="flush-collapseFive">
-                                    Career Advancement
-                                </button>
-                            </h2>
-                            <div id="flush-collapseFive" class="accordion-collapse collapse" aria-labelledby="flush-headingFive" data-bs-parent="#accordionFlushExample">
-                                <div class="accordion-body">
-                                    <p>At <span>Virtue Corporate</span>, your career growth is limitless. We are committed to promoting from within and providing opportunities for advancement. Whether through mentorship, leadership programs, or internal promotions, we help you take the next step in your career journey.</p>
-                                </div>
-                            </div>
+                    </div>
+                    <div class="col-lg-6 mb-4">
+                        <div class="benefit-item">
+                            <h4>Wellness Programs</h4>
+                            <p>We care about your well-being. Our wellness programs are designed to support your physical and mental health. From gym memberships and yoga sessions to mental health resources, we offer various initiatives to help you stay healthy and energized.</p>
                         </div>
                     </div>
                     
-                </div>
-                <div class="col-lg-6">
-                    <section class="career-form-section">
-                        <div class="container">
-                            <div class="row justify-content-center">
-                                <div class="col-lg-8">
-                                    <h2 class="text-center mb-4">Join Our Team</h2>
-                                    <form action="/submit-application" method="POST" enctype="multipart/form-data" id="form">
-                                        <input type="hidden" name="access_key" value="ce35ddae-b998-4d02-9326-0b6952ff5ced">
-                
-                                        <div class="mb-3">
-                                            <label for="fullName" class="form-label">Full Name</label>
-                                            <input type="text" class="form-control" id="fullName" name="fullName" placeholder="Enter your full name" required>
-                                        </div>
-                                        <div class="mb-3">
-                                            <label for="email" class="form-label">Email Address</label>
-                                            <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email address" required>
-                                        </div>
-                                        <div class="mb-3">
-                                            <label for="phone" class="form-label">Phone Number</label>
-                                            <input type="tel" class="form-control" id="phone" name="phone" placeholder="Enter your phone number" required>
-                                        </div>
-                                        <div class="mb-3">
-                                            <label for="position" class="form-label">Position Applied For</label>
-                                            <select class="form-select" id="position" name="position" required onchange="toggleOtherField(this.value)">
-                                                <option value="" disabled selected>Select a position</option>
-                                                <option value="Web Developer">Web Developer</option>
-                                                <option value="Front-End Developer">Front-End Developer</option>
-                                                <option value="Back-End Developer">Back-End Developer</option>
-                                                <option value="Full-Stack Developer">Full-Stack Developer</option>
-                                                <option value="SEO Specialist">SEO Specialist</option>
-                                                <option value="SMO Specialist">SMO Specialist</option>
-                                                <option value="Digital Marketing">Digital Marketing</option>
-                                                <option value="Business Executive">Business Executive</option>
-                                                <option value="Others">Others</option>
-                                            </select>
-                                        </div>
-                                        <div class="mb-3" id="otherPositionField" style="display:none;">
-                                            <label for="otherPosition" class="form-label">Please Specify</label>
-                                            <input type="text" class="form-control" id="otherPosition" name="otherPosition" placeholder="Enter the position">
-                                        </div>
-                                        <div class="mb-3">
-                                            <label for="resume" class="form-label">Upload Resume</label>
-                                            <input type="file" class="form-control" id="resume" name="resume" accept=".pdf,.doc,.docx" required>
-                                        </div>
-                                        <div class="mb-3">
-                                            <label for="coverLetter" class="form-label">Cover Letter</label>
-                                            <textarea class="form-control" id="coverLetter" name="coverLetter" rows="4" placeholder="Include a brief cover letter (optional)"></textarea>
-                                        </div>
-                                        <div class="submit-career">
-                                            <button type="submit" class="btn btn-primary">Submit Application</button>
-                                        </div>
-                                        <div id="result"></div>
-                                    </form>
-                                </div>
-                            </div>
+                    <div class="col-lg-6 mb-4">
+                        <div class="benefit-item">
+                            <h4>Career Advancement</h4>
+                            <p>At <span>Virtue Corporate</span>, your career growth is limitless. We are committed to promoting from within and providing opportunities for advancement. Whether through mentorship, leadership programs, or internal promotions, we help you take the next step in your career journey.</p>
                         </div>
-                    </section>
-                
-                    <script>
-                        function toggleOtherField(value) {
-                            var otherField = document.getElementById("otherPositionField");
-                            otherField.style.display = value === "Others" ? "block" : "none";
-                        }
-                    </script>
-                
-                    <script>
-                        document.getElementById('form').addEventListener('submit', function(e) {
-                            e.preventDefault();
-                
-                            const formData = new FormData(this);
-                            const object = Object.fromEntries(formData);
-                            const json = JSON.stringify(object);
-                            const result = document.getElementById('result');
-                
-                            result.innerHTML = "Please wait...";
-                
-                            fetch('https://api.web3forms.com/submit', {
-                                method: 'POST',
-                                headers: {
-                                    'Content-Type': 'application/json',
-                                    'Accept': 'application/json'
-                                },
-                                body: json
-                            })
-                            .then(async response => {
-                                const json = await response.json();
-                                if (response.status === 200) {
-                                    result.innerHTML = "Form submitted successfully";
-                                } else {
-                                    console.log(response);
-                                    result.innerHTML = json.message;
-                                }
-                            })
-                            .catch(error => {
-                                console.error(error);
-                                result.innerHTML = "Something went wrong!";
-                            })
-                            .finally(() => {
-                                this.reset();
-                                setTimeout(() => {
-                                    result.style.display = "none";
-                                }, 3000);
-                            });
-                        });
-                    </script>
+                    </div>
                 </div>
-                
             </div>
         </div>
     </section>
+    
     
     <footer>
         <div class="container">

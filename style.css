@@ -223,18 +223,18 @@ body {
     top: 0px;
     transform: translateX(404px);
      right: 0px;
-    background-color:#efba1c;
+    background-color:#005395;
     width: 400px;
     height: 100vh;
     z-index: 200;
-    display: flex;
+    display: none;
     flex-direction: column;
     transition:  0.45s linear;
 }
 
 .show-sidenav {
     right: 0px;
-    /* display: block; */
+    display: flex;
     transform: translateX(0px);
 
 }
@@ -357,15 +357,15 @@ body {
     border-bottom: 2px solid white;
     width: fit-content;
     margin-left: 20px;
-    padding: 10px;
-    font-size: 30px;
+    padding:0 10px;
+    font-size: 25px;
     font-weight: 400;
     color: white;
 }
 
 .caption-head {
     margin: 20px;
-    font-size: 60px;
+    font-size: 50px;
     font-weight: 400;
     color: #484877;
 }
@@ -388,6 +388,7 @@ body {
 .about1-col span {
     font-size: larger;
     color: #efba1c;
+    font-weight: bold;
 }
 
 .about1-col p {
@@ -702,7 +703,7 @@ body {
 .join-head p{
     font-weight: 500;
 }
-.benefits{
+/* .benefits{
     padding: 30px;
     
 }
@@ -718,10 +719,57 @@ body {
     background-color: #005395;
     color: #efba1c;
     font-size: 25px;
+} */
+.benefit-box {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.benefit-head {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.benefit-item {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.benefit-item:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px);
+}
+
+.benefit-item h4 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #efba1c;
+}
+
+.benefit-item p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.benefit-item span {
+    font-weight: bold;
+    color: #2E236C; /* Use your preferred color */
+}
+.submit-career{
+    display: flex;
+    justify-content: center;
+
 }
 .submit-career button{
     background-color: #005395;
-    color: #005395;
+    color: #fff;
     font-weight: bold;
 }
 
@@ -832,19 +880,19 @@ body {
 
 .content-head {
     line-height: 1.5;
-    font-size: 35px;
+    font-size: 30px;
     font-weight: 400;
 }
 
 .content-head b {
     color: #efbb1c;
     font-weight: 600;
-    font-size: 45px;
+    font-size: 40px;
 }
 
 .about-content .content-caption {
     /* margin-top: 10px; */
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 400;
 }
 
@@ -863,7 +911,6 @@ body {
 .counter-con {
     display: grid;
     grid-template-columns: 2fr 2fr;
-
 }
 
 .counter {
@@ -872,7 +919,7 @@ body {
 }
 
 .counter span {
-    font-size: 45px;
+    font-size: 40px;
     font-weight: 500;
 
 }
@@ -985,7 +1032,7 @@ body {
 
 .sertors-elevate-con h2 {
     font-size: 40px;
-    font-weight: 500;
+    font-weight: 600;
     color: #efba1c;
     margin-top: 100px;
 }
@@ -1042,7 +1089,7 @@ body {
 
 .sector-item-inner p {
     color: #ffff;
-    font-size: 25px;
+    font-size: 22px;
     font-weight: 400;
     margin-top: 10px;
 }
@@ -1079,18 +1126,18 @@ body {
 .feature-col1 {
     /* padding: 50px !important; */
     text-align: left !important;
+    padding: 0 20px;
 }
 
 .feature-col {
-    /* border: 1px solid #484877; */
     text-align: center;
-    /* padding: 30px; */
+    
     align-content: center;
 }
 
 .feature-head {
     font-weight: 500;
-    margin: 10px;
+    margin: 10px 0;
     font-size: 25px;
 }
 
@@ -1189,7 +1236,7 @@ body {
 
 .client-head {
     padding: 20px;
-    font-size: 45px !important;
+    font-size: 40px !important;
     font-weight: 400;
     color: white;
 }
@@ -1201,7 +1248,7 @@ body {
 
 .client-caption {
     color: white;
-    font-size: 20px !important;
+    font-size: 18px !important;
     padding: 0 30px;
 
 }
@@ -1255,27 +1302,35 @@ body {
     margin-top: 80px;
     margin-bottom: 30px;
 }
-
-.tech-imgs {
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    /* row-gap: 25px; */
-    justify-content: space-between;
-    place-content: center;
-    padding: 10px;
-    margin-bottom: 20px;
-    gap: 25px;
+.technology h3{
+    font-size: 20px;
 }
 
 .tech-img {
-    height: auto;
-    width: 150px;
-    padding: 20px;
+    display: flex;
     justify-content: center;
-    place-content: center;
-    border-radius: 10px;
-    cursor: pointer;
+} 
+.tech-img img{
+    width: 50%;
+    object-fit: contain;
+}
+.tech-imgs {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 0;
+}
+.tech-imgs .item{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* 
+
+.tech-img {
+    padding: 20px;
 }
 
 
@@ -1283,15 +1338,9 @@ body {
     text-align: center;
 }
 
-.tech-img svg {
-    height: 100%;
-    width: 100%;
-}
 
-.tech-img img {
-    height: 100%;
-    width: 100%;
-}
+
+*/
 
 /* howwe-content start---------------------------------------------- */
 
@@ -1445,7 +1494,7 @@ body {
 
 /* our partner start---------------------- */
 .our-partners-container {
-    padding: 20px 0;
+    padding: 40px 0;
 }
 
 .our-partners-heading {
@@ -1456,11 +1505,18 @@ body {
 .our-partners-item {
     margin-bottom: 20px;
 }
-
+.our-partners-item{
+    width: 100%;
+    height: fit-content;
+}
+.our-partners-col{
+    margin-top: 30px;
+}
 .our-partners-img {
-    width: 180px;
-    height: 180px;
+    width: 100%;
+    height: 100%;
     object-fit: contain;
+    
     transition: transform 0.3s ease;
 }
 
@@ -1766,12 +1822,12 @@ body {
 }
 
 .stay-contact-content {
-    padding: 80px 0 80px 0;
+    /* padding: 80px 0 80px 0; */
 }
 
 
 .stay-contact-head {
-    font-size: 45px;
+    font-size: 40px;
     font-weight: 400;
     color: white;
 }
@@ -1783,7 +1839,7 @@ body {
 
 .stay-contact-caption {
     margin-top: 20px;
-    font-size: 25px;
+    font-size: 20px;
     font-weight: 400;
     color: white;
 }
@@ -1794,7 +1850,7 @@ body {
     display: flex;
     width: fit-content;
     flex-direction: row;
-    justify-content: space-around;
+    /* justify-content: space-around; */
     flex-wrap: wrap;
 }
 
@@ -1803,7 +1859,7 @@ body {
     /* padding: 30px; */
     text-align: center;
 
-    margin: 20px;
+    margin:0 10px;
 }
 
 .stay-loaction-icon i {
@@ -1874,7 +1930,7 @@ body {
 }
 
 .about-banner-head {
-    font-size: 60px;
+    font-size: 40px;
     font-weight: 400;
     /* border: 1px solid #484877; */
     /* background-color: rgba(255, 255, 255, 0.266); */
@@ -1898,7 +1954,7 @@ body {
 
 .about-banner-caption {
     font-weight: 400;
-    font-size: 25px;
+    font-size: 18px;
     margin-top: 20px;
     text-wrap: wrap;
     /* text-shadow: -2px -2px 1px rgb(253, 251, 251); */
@@ -2030,13 +2086,14 @@ body {
 
 .service-head {
     line-height: 1.5;
-    font-size: 50px;
+    font-size: 30px;
     font-weight: 400;
-    color: #efbb1c;
+    color: #ffff;
 }
 
 .service-head b {
-    color: white;
+    font-size: 40px;
+    color: #efba1c;
     font-weight: 600;
 }
 
@@ -2049,9 +2106,9 @@ body {
 
 .service-caption {
     margin-top: 20px;
-    font-size: 25px;
+    font-size: 18px;
     font-weight: 400;
-    color: #efbb1c;
+    color: #ffff;
 }
 
 .service-content button {
@@ -2059,7 +2116,7 @@ body {
     font-weight: 500;
     margin: 10px 20px 0 0;
     border-radius: 50px;
-    font-size: 20px;
+    font-size: 18px;
     border: none;
 }
 
@@ -2091,7 +2148,7 @@ body {
 .service-banner2 img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
     object-position: center;
     background-position: center;
 }
@@ -2107,17 +2164,18 @@ body {
 }
 
 .services-top .service-head {
-    font-size: 35px;
+    font-size: 30px;
     color: #484877;
 }
 
 .services-top .service-caption {
-    font-size: 20px;
+    font-size: 18px;
     color: #484877;
 }
 
 .services-top .service-head b {
     color: #efbb1c;
+    font-size: 40px;
 }
 
 .services-top hr {
@@ -2149,6 +2207,14 @@ body {
     padding: 30px;
     text-align: center;
 }
+.service-items h4{
+    font-size: 22px;
+    color: #efbb1c;
+}
+.service-items .feature-caption{
+    font-size: 18px !important;
+color: #484877 !important;
+}
 
 /* .service-items .feature-head{
     color: #efbb1c;
@@ -2171,7 +2237,7 @@ body {
     /* border: 1px solid #efbb1c; */
     padding: 20px;
     border-radius: 5px;
-    background-color: #efbb1c;
+    background-color: #005395;
     color: white;
     margin: 10px;
 }
@@ -2190,7 +2256,7 @@ body {
 .startup-section .container-fluid {
 
 
-    height: 120vh;
+    height: 100%;
     background-image: url(./images/Service.webp);
     background-size: cover;
     background-attachment: fixed;
@@ -2200,25 +2266,26 @@ body {
 }
 
 .startup-content {
-    padding: 100px 60px 0px 50px;
+    padding: 80px 60px 20px 50px;
 
 }
 
 .startup-head {
-    line-height: 1.5;
+    /* line-height: 1.5; */
     font-weight: 400;
-    font-size: 40px;
+    font-size: 30px;
 }
 
 .startup-head b {
     font-weight: 500;
+    font-size: 40px;
     color: #efbb1c;
 }
 
 .startup-caption {
     font-weight: 400;
     margin-top: 20px;
-    font-size: 20px;
+    font-size: 18px;
 }
 
 .service-progress .progress-inner {
@@ -2235,12 +2302,12 @@ body {
 }
 
 .progress-inner h4 {
-    font-size: 25px;
+    font-size: 20px;
 }
 
 .service-progress .progress-bar {
     background-color: #005395 !important;
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 400;
 }
 
@@ -2282,19 +2349,19 @@ body {
 
 .about-service-content {
     color: black;
-    font-size: 22px;
+    font-size: 18px;
     text-align: center;
     margin-top: 80px;
 }
 
 .about-service-content h2 {
     color: #484877;
-    font-weight: 700;
+    font-weight: 600;
     font-size: 40px;
 }
 
 .service-tech h3 {
-    font-size: 35px;
+    font-size: 30px;
     color: #efbb1c;
 }
 
@@ -2302,7 +2369,7 @@ body {
     margin-top: 20px;
     color: #484877;
     font-weight: 600;
-    font-size: 22px;
+    font-size: 20px;
     background-color: white;
     border-radius: 10px;
     box-shadow: 1px 1px 7px grey;
@@ -2323,7 +2390,7 @@ body {
 .web-technologies {
     display: grid;
     grid-template-columns:Repeat(5,1fr);
-    justify-content: center;
+    justify-self: center;
     gap: 25px;
 
 }
@@ -2348,7 +2415,7 @@ body {
 
 .service-process-sec h2 {
     font-size: 40px;
-    font-weight: 600;
+    font-weight: 500;
 }
 
 .process-item-inner {
@@ -2375,7 +2442,7 @@ body {
 }
 
 .process-item-inner p {
-    font-size: 22px;
+    font-size: 20px;
     color: #484877;
     border-radius: 30px;
     border-right: 3px solid #efbb1c;
@@ -2437,7 +2504,7 @@ body {
 .we-provide-sec h2 {
     margin-top: 60px;
     margin-bottom: 30px;
-    font-size: 45px;
+    font-size: 40px;
     text-align: center;
 }
 
@@ -2465,7 +2532,7 @@ body {
 }
 
 .we-provide-content {
-    padding: 0 20px 0 40px;
+    padding: 20px 20px 10px 40px;
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -2474,7 +2541,7 @@ body {
 }
 
 .we-provide-content h3 {
-    font-size: 40px;
+    font-size: 35px;
     font-weight: 500;
 }
 
@@ -2504,7 +2571,7 @@ body {
 }
 
 .faq-col h2 {
-    font-size: 45px;
+    font-size: 40px;
     font-weight: 600;
 }
 
@@ -2518,12 +2585,12 @@ body {
 }
 
 .faq-sec .accordion-item h2 button {
-    font-size: 25px;
+    font-size: 20px;
     padding: 20px;
 }
 
 .faq-sec .accordion-item .accordion-body {
-    font-size: 20px;
+    font-size: 18px;
 }
 
 .faq-sec .accordion-button {
@@ -2566,7 +2633,7 @@ body {
 }
 
 .start-your-project-sec h2 {
-    font-size: 45px;
+    font-size: 40px;
     font-weight: 600;
     line-height: 1.2;
 }
@@ -2577,7 +2644,7 @@ body {
     background-color: #484877;
     color: #fff;
     width: fit-content;
-    font-size: 25px;
+    font-size: 22px;
     align-self: self-end;
     margin-top: 20px;
     /* border-radius: 10px; */
@@ -2661,15 +2728,15 @@ body {
     color: #efba1c;
     /* border: 1px solid #484877; */
 }
-.contact-location h4, .feature-caption{
+/* .contact-location h4, .feature-caption{
     color: #efba1c !important;
-}
+} */
 .contact-form label{
-    color: #efba1c !important;
+    color: #ffff !important;
 }
 .contact-form button{
     background-color: #efba1c !important;
-    color: #005395 !important;
+    color: #ffff !important;
 }
 
 .form-content {
@@ -2757,10 +2824,11 @@ body {
     border-bottom: 2px solid white;
     width: fit-content;
     padding-bottom: 10px;
+    color: #fff;
 }
 
 .location-items .feature-caption {
-    color: #484877;
+    color: #ffff;
     font-weight: 400;
 }
 
@@ -3020,7 +3088,42 @@ footer a {
 
 /* --------------footer-end------------------ */
 
+ @media (max-width:1480px) {
+    .caption-banner {
+        margin-top: -30px;
+        margin-left: 20px;
+        font-size: 22px;
+        font-weight: 400;
+    }
 
+    .caption-head {
+        margin: 20px;
+        font-size: 40px;
+        font-weight: 400;
+        color: #484877;
+    }
+    footer h4, footer h2{
+        font-size: 18px !important;
+    }
+    footer li, footer p{
+        font-size: 16px;
+    }
+}
+@media (max-width:1230px) {
+    .caption-banner {
+        margin-top: -40px;
+        margin-left: 0px;
+        font-size: 22px;
+        font-weight: 400;
+    }
+
+    .caption-head {
+        margin: 0px;
+        font-size: 40px;
+        font-weight: 400;
+        color: #484877;
+    }
+} 
 
 
 @media (max-width:990px) {
@@ -3043,6 +3146,9 @@ footer a {
     .sticky-logo {
         margin-top: -5px !important;
     }
+    /* .sidenav-container {
+       display: flex;
+    } */
 
     .team-ceo {
         text-align: center;
@@ -3061,9 +3167,8 @@ footer a {
     }
 
     .caption-banner {
-
+        margin-top: 0;
         margin-left: 20px;
-        padding: 10px;
         font-size: 16px;
         font-weight: 400;
     }
@@ -3099,6 +3204,21 @@ footer a {
     .start-your-project-sec h2{
         font-size: 35px;
     }
+    .service-banner2{
+        display: none;
+    }
+    .about-banner {
+        background-image: none;
+    }
+    .career-img{
+        display: none;
+    }
+    footer h4, footer h2{
+        font-size: 18px !important;
+    }
+    footer li, footer p{
+        font-size: 16px;
+    }
 
    
 }
@@ -3111,6 +3231,7 @@ footer a {
         gap: 25px;
     
     }
+   
 }
 
 @media(max-width:800px) {
@@ -3154,6 +3275,7 @@ footer a {
     }
 
     .caption-banner {
+        margin-top: 35px;
         font-size: 18px;
     }
 
@@ -3187,8 +3309,8 @@ footer a {
     .caption-banner {
         border-bottom: 1px solid white;
         margin-left: 20px;
-        padding: 10px;
-        font-size: 15px;
+        padding: 0 10px;
+        /* font-size: 15px; */
         font-weight: 400;
     }
 
@@ -3219,6 +3341,69 @@ footer a {
         gap: 25px;
     
     }
+    .content-head {
+        font-size: 22px;
+    }
+    
+    .content-head b {
+        font-size: 30px;
+    }
+    .about-content {
+        padding: 30px 0 30px 0;
+    }
+    
+    .about-content .content-caption {
+        font-size: 18px;
+    }
+    .counter-con {
+       justify-items: center;
+    }
+    .counter span {
+        font-size: 35px;
+    }
+    
+    .counter p {
+        font-size: 18px;
+    }
+    .sertors-elevate-con h2{
+        font-size: 30px;
+     margin-top: 60px;
+    }
+    .feature-col{
+        text-align: left;
+        padding: 0 20px;
+    }
+    .sector-item-inner p{
+        font-size: 20px;
+    }
+    .feature-details{
+        font-size: 18px;
+    }
+    .about-content button, .feature-col button{
+        font-size: 18px;
+    }
+    .client-head{
+        font-size: 30px !important;
+    }
+    .client-caption{
+        font-size: 18px !important;
+    }
+    .stay-contact-head{
+        font-size: 30px;
+    }
+    .stay-contact-caption{
+        font-size: 16px;
+    }
+    .stay-location-items .feature-head{
+        font-size: 20px;
+    }
+    .stay-location-items .feature-caption{
+        font-size: 16px;
+    }
+    .stay-loaction-icon i{
+        font-size: 25px;
+    }
+    
 }
 
 @media (max-width:500px) {
@@ -3259,15 +3444,15 @@ footer a {
     }
 
     .caption-banner {
-
-        margin-left: 20px;
-        padding: 5px;
+        margin-top: 20px;
+        margin-left: 10;
         font-size: 10px;
         font-weight: 400;
     }
 
     .caption-head {
-        margin-top: -5px;
+        margin-top: -10px;
+        margin-left: 10px;
         font-size: 20px;
         font-weight: 400;
         color: #484877;
@@ -3275,6 +3460,15 @@ footer a {
 
     .home-banner-sec {
         margin-top: 0;
+    }
+    .stay-location-items .feature-head{
+        font-size: 18px;
+    }
+    .stay-location-items .feature-caption{
+        font-size: 15px;
+    }
+    .stay-loaction-icon i{
+        font-size: 22px;
     }
 
 }
