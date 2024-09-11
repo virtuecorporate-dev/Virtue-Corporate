@@ -102,27 +102,8 @@ $(document).on('ready', counter);
 $(window).on('scroll', counter);
 
 
-// -----------------testimonial-------------
+// -----------------magnific popup-------------
 
 
-// const swiperEl = document.querySelector(".mySwiper");
 
-// Object.assign(swiperEl, {
-//   grabCursor: true,
-//   effect: "creative",
-//   creativeEffect: {
-//     prev: {
-//       shadow: true,
-//       translate: [0, 0, -400],
-//     },
-//     next: {
-//       translate: ["100%", 0, 0],
-//     },
-//   },
-//   pagination: {
-//     el: swiperEl.parentElement.querySelector('swiper-pagination'),
-//     clickable: true,
-//   },
-// });
 
-// swiperEl.initialize();
